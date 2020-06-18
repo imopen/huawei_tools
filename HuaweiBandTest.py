@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 from huawei_lte_api.Client import Client
 from huawei_lte_api.AuthorizedConnection import AuthorizedConnection
 from huawei_lte_api.Connection import Connection
@@ -126,8 +127,8 @@ def print_stats(client, speed_test, band):
     device_info = client.device.information()
 
     # logger.info pretty info
-    # logger.info(json.dumps(signal_info, sort_keys=True, indent=4))
-    # logger.info(json.dumps(device_info, sort_keys=True, indent=4))
+    logger.debug(json.dumps(signal_info, sort_keys=True, indent=4))
+    #logger.info(json.dumps(device_info, sort_keys=True, indent=4))
 
     download_mbps = 8 * speedtest_info["download"]["bandwidth"] / 1000 / 1000
     upload_mbps = 8 * speedtest_info["upload"]["bandwidth"] / 1000 / 1000
