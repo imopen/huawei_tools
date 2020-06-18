@@ -29,16 +29,9 @@ It will report the result on `INFO` log level, in csv style, so you can analyze 
 
 ## Huawei Band Set
 ### Installation
-You need speedtest command line tool. You can grab it at: https://www.speedtest.net/apps/cli  
-Install it based on your operating system .
-    
-You need also huawei-lte-api, you can install it with:
+You need huawei-lte-api, you can install it with:
 `pip install huawei-lte-api` (or `pip3 install huawei-lte-api`)
 
 ### What it does
-You set the config variable, for example `bands = ["7+3", "1+3", "1+7", "7"]`, with all the bands combinations you would like to test.
-You launch script and it would tests your bands every hour (configurable), 
-launching a speed test for you for every combination you specify.  
+It set the bands combination you pass on argument.
 Pay attention that order matters, on `"7+3"` combination the first band `7` is the base one, the other `3` work if carrier aggregation is available.
-
-It will report the result on `INFO` log level, in csv style, so you can analyze it on a spreadsheet editor.
